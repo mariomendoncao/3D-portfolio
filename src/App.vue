@@ -34,10 +34,7 @@ onUnmounted(() => {
     <!-- Conteúdo da página (seções) -->
     <div class="relative z-10">
       <!-- Cada seção ocupa a tela inteira -->
-      <section
-        class="min-h-screen flex items-center justify-center bg-transparent text-white text-6xl">
-        <div>Hero Section</div>
-      </section>
+      <HeroSection />
       <section
         class="min-h-screen flex items-center justify-center bg-gray-800/5 text-white text-4xl">
         <div>Habilidades</div>
