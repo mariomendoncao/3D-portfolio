@@ -1,48 +1,43 @@
-<script setup></script>
+<script setup>
+import { ref, watch, defineProps } from "vue";
+
+// Recebe o valor de "progress" via prop
+const props = defineProps(["progress"]);
+
+// Estado reativo que controla a exibição do texto
+const showText = ref(false);
+setTimeout(() => (showText.value = true), 3000);
+</script>
 
 <template>
   <section
-    class="min-h-screen flex items-center justify-center bg-transparent text-white text-6xl">
-    <div class="max-w-4xl">
+    class="relative min-h-screen flex flex-col items-center justify-end pb-64 bg-transparent text-white text-6xl border border-amber-300 px-6">
+    <!-- Título principal SEM movimentação -->
+    <div class="relative">
       <h1
-        class="text-8xl font-extrabold mb-4 animate-fade-in font-terminal text-terminal typing-effect">
+        class="text-8xl font-extrabold mb-4 font-terminal text-terminal typing-effect">
         Olá, sou Mário!
       </h1>
-      <p class="text-xl text-gray-300 mb-6 animate-fade-in">
-        Desenvolvedor(a) Web | Transformando ideias em código
-      </p>
+    </div>
 
-      <!-- <div class="flex justify-center gap-4">
-        <button
-          class="px-6 py-3 text-lg font-semibold bg-amber-500 hover:bg-amber-600 transition rounded-lg shadow-md">
-          Veja meus projetos
-        </button>
-        <button
-          class="px-6 py-3 text-lg font-semibold border border-amber-500 hover:bg-amber-500 hover:text-white transition rounded-lg shadow-md">
-          Entre em contato
-        </button>
-      </div> -->
+    <!-- Bloco de texto POSICIONADO ABSOLUTAMENTE para não empurrar o título -->
+    <div
+      class="text-center max-w-6xl opacity-0 transition-opacity duration-500"
+      :class="{ 'opacity-100': showText }">
+      <h1 class="text-6xl font-extrabold leading-tight">
+        Criando experiências
+        <span class="text-amber-400">digitais</span> interativas
+      </h1>
+      <p class="text-2xl text-gray-300 mt-4">
+        Sou um desenvolvedor apaixonado por transformar ideias em soluções
+        inovadoras. Construo aplicações performáticas e interfaces envolventes
+        que encantam usuários.
+      </p>
     </div>
   </section>
 </template>
 
 <style>
-@keyframes fade-in {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.animate-fade-in {
-  animation: fade-in 0.8s ease-out forwards;
-  animation-delay: 0.5s;
-}
-
 @keyframes typing {
   from {
     width: 0;

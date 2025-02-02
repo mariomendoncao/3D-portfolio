@@ -3,7 +3,7 @@
 import { TresCanvas, useRenderLoop } from "@tresjs/core";
 import { ref, watch, defineProps } from "vue";
 import ComputerModel from "./ComputerModel.vue";
-import { Stars } from "@tresjs/cientos";
+// import { Stars } from "@tresjs/cientos";
 
 // Recebe o valor de "progress" via prop
 const props = defineProps<{ progress: number }>();
@@ -75,7 +75,7 @@ onLoop(() => {
       <!-- Iluminação -->
       <TresDirectionalLight :intensity="2" :position="[3, 3, 3]" />
       <TresAmbientLight :intensity="0.7" />
-      <Stars />
+      <!-- <Stars /> -->
     </TresCanvas>
   </div>
 </template>

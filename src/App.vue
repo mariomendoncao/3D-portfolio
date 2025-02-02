@@ -26,6 +26,7 @@ onUnmounted(() => {
 <template>
   <!-- Container principal -->
   <div class="relative">
+    <p class="fixed left-2">{{ progress.toFixed(2) }}</p>
     <!-- Fundo 3D fixo -->
     <div class="fixed inset-0 z-0">
       <Background3D :progress="progress" />
@@ -34,7 +35,7 @@ onUnmounted(() => {
     <!-- Conteúdo da página (seções) -->
     <div class="relative z-10">
       <!-- Cada seção ocupa a tela inteira -->
-      <HeroSection />
+      <HeroSection :progress="progress" />
       <section
         class="min-h-screen flex items-center justify-center bg-gray-800/5 text-white text-4xl">
         <div>Habilidades</div>
