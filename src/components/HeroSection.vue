@@ -20,7 +20,7 @@ setTimeout(() => (showText.value = true), 3000);
 
 <template>
   <section
-    class="relative min-h-screen flex flex-col items-center justify-end pb-64 bg-transparent text-white text-6xl border px-6"
+    class="relative min-h-screen flex flex-col items-center justify-end pb-64 bg-transparent text-white text-6xl px-6"
     :style="{ opacity: opacity }">
     <!-- Título principal SEM movimentação -->
     <div class="relative">
