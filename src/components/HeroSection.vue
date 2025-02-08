@@ -4,6 +4,15 @@ import { ref, watch, defineProps } from "vue";
 // Recebe o valor de "progress" via prop
 const props = defineProps(["progress"]);
 
+// define a opacidade do elemento conforme o progresso e diminuita a opacidade conforme o scroll
+const opacity = ref(1);
+watch(
+  () => props.progress,
+  (newVal) => {
+    opacity.value = 1 - newVal * 20;
+  }
+);
+
 // Estado reativo que controla a exibição do texto
 const showText = ref(false);
 setTimeout(() => (showText.value = true), 3000);
@@ -11,9 +20,11 @@ setTimeout(() => (showText.value = true), 3000);
 
 <template>
   <section
-    class="relative min-h-screen flex flex-col items-center justify-end pb-64 bg-transparent text-white text-6xl border border-amber-300 px-6">
+    class="relative min-h-screen flex flex-col items-center justify-end pb-64 bg-transparent text-white text-6xl border px-6"
+    :style="{ opacity: opacity }">
     <!-- Título principal SEM movimentação -->
     <div class="relative">
+      <!-- <p>opacidade {{ opacity }}</p> -->
       <h1
         class="text-8xl font-extrabold mb-4 font-terminal text-terminal typing-effect">
         Olá, sou Mário!
@@ -22,13 +33,13 @@ setTimeout(() => (showText.value = true), 3000);
 
     <!-- Bloco de texto POSICIONADO ABSOLUTAMENTE para não empurrar o título -->
     <div
-      class="text-center max-w-6xl opacity-0 transition-opacity duration-500"
+      class="text-center max-w-6xl opacity-0 transition-opacity duration-3000 ease-in-out"
       :class="{ 'opacity-100': showText }">
       <h1 class="text-6xl font-extrabold leading-tight">
         Criando experiências
         <span class="text-amber-400">digitais</span> interativas
       </h1>
-      <p class="text-2xl text-gray-300 mt-4">
+      <p class="text-2xl text-gray-300 mt-6">
         Sou um desenvolvedor apaixonado por transformar ideias em soluções
         inovadoras. Construo aplicações performáticas e interfaces envolventes
         que encantam usuários.
