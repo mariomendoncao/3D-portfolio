@@ -9,7 +9,7 @@ const opacity = ref(1);
 watch(
   () => props.progress,
   (newVal) => {
-    opacity.value = 1 - newVal * 20;
+    opacity.value = 1 - newVal * 15;
   }
 );
 

@@ -36,8 +36,8 @@ onUnmounted(() => {
     <!-- Conteúdo da página (seções) -->
     <div class="relative z-10">
       <!-- Cada seção ocupa a tela inteira -->
-      <HeroSection class="" :progress="progress" />
-      <habilidades class="" :progress="progress" />
+      <HeroSection :progress="progress" />
+      <habilidades :progress="progress" />
 
       <section
         class="min-h-screen flex items-center justify-center bg-gray-700/10 text-white text-4xl">
