@@ -6,6 +6,7 @@
   --font-display: "Satoshi", "sans-serif";
   --font-terminal: "VT323", "monospace";
   --color-terminal: rgb(0, 255, 0);
+  --half-screen: 50vh;
 
   /* --breakpoint-3xl: 1920px;
   --color-avocado-100: oklch(0.99 0 0);
