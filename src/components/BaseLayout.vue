@@ -1,7 +1,5 @@
 <template>
-  <section
-    class="min-h-[var(--half-screen)] flex items-center justify-start text-white text-4xl flex-col pt-12 bg-amber-200"
-    :style="{ opacity: computedOpacity }">
+  <section :style="{ opacity: computedOpacity }">
     <!-- Conteúdo passado via slot -->
     <slot />
   </section>
@@ -31,6 +29,10 @@ const props = defineProps({
   maxInput: {
     type: Number,
     default: 0.25,
+  },
+  cssClasses: {
+    type: String,
+    default: "",
   },
 });
 

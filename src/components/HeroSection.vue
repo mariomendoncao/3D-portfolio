@@ -37,7 +37,11 @@ setTimeout(() => (showText.value = true), 3000);
       :class="{ 'opacity-100': showText }">
       <h1 class="text-6xl font-extrabold leading-tight">
         Criando experiências
-        <span class="text-amber-400">digitais</span> interativas
+        <span
+          class="bg-gradient-to-r from-orange-500 via-yellow-500 to-pink-500 text-transparent bg-clip-text"
+          >digitais</span
+        >
+        interativas
       </h1>
       <p class="text-2xl text-gray-300 mt-6">
         Sou um desenvolvedor apaixonado por transformar ideias em soluções
