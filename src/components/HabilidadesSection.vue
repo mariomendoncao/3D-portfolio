@@ -7,8 +7,8 @@
     :maxInput="0.25"
     class="min-h-[var(--half-screen)] flex items-center justify-start text-white text-4xl flex-col pt-12 border-amber-500 border">
     <h1
-      class="text-6xl font-bold bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-transparent bg-clip-text mb-12">
-      Minhas Habilidades
+      class="text-6xl font-bold bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-transparent bg-clip-text mb-14 p-2">
+      Meus serviços
     </h1>
 
     <div
@@ -53,8 +53,9 @@ const skills = ref([
       "https://lottie.host/c2278531-504d-4835-aeb8-c0d120aa8961/Avop8PfU5f.lottie",
   },
   {
-    title: "Lógica de Programação",
-    description: "Desenvolvimento de soluções inteligentes e performáticas.",
+    title: "Criação de Sistemas Personalizados",
+    description:
+      "Desenvolvimento de soluções inteligentes e performáticas adaptados para seu negócio.",
     // icon: Layers,
     animation:
       "https://lottie.host/e4b62f91-1216-46c8-9a58-84afeb2f4729/PM9rg0TDNo.lottie",
