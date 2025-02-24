@@ -38,11 +38,12 @@ setTimeout(() => (showText.value = true), 3000);
       <h1 class="text-6xl font-extrabold leading-tight">
         Criando experiências
         <span
-          class="bg-gradient-to-r from-orange-500 via-yellow-500 to-pink-500 text-transparent bg-clip-text"
+          class="bg-gradient-to-r from-cyan-400 via-blue-500 to-indigo-600 text-transparent bg-clip-text"
           >digitais</span
         >
         interativas
       </h1>
+
       <p class="text-2xl text-gray-300 mt-6">
         Sou um desenvolvedor apaixonado por transformar ideias em soluções
         inovadoras. Construo aplicações performáticas e interfaces envolventes

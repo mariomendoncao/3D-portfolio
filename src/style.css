@@ -19,3 +19,11 @@
   --ease-snappy: cubic-bezier(0.2, 0, 0, 1); */
   /* ... */
 }
+
+.main-title-text {
+  @apply text-6xl font-bold bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-transparent bg-clip-text mb-14 p-2;
+}
+
+.title-text {
+  @apply text-2xl font-semibold mb-2 bg-gradient-to-r from-cyan-400 via-blue-500 to-indigo-600 text-transparent bg-clip-text;
+}
