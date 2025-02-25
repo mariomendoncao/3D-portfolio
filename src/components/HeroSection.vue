@@ -20,13 +20,13 @@ setTimeout(() => (showText.value = true), 3000);
 
 <template>
   <section
-    class="relative min-h-screen flex flex-col items-center justify-end pb-64 bg-transparent text-white text-6xl px-6"
+    class="relative min-h-screen flex flex-col items-center justify-end pb-64 bg-transparent text-white pt-64 px-6"
     :style="{ opacity: opacity }">
     <!-- Título principal SEM movimentação -->
     <div class="relative">
       <!-- <p>opacidade {{ opacity }}</p> -->
       <h1
-        class="text-8xl font-extrabold mb-4 font-terminal text-terminal typing-effect">
+        class="md:text-8xl text-5xl font-extrabold mb-4 font-terminal text-terminal typing-effect">
         Olá, sou Mário!
       </h1>
     </div>
@@ -35,7 +35,7 @@ setTimeout(() => (showText.value = true), 3000);
     <div
       class="text-center max-w-6xl opacity-0 transition-opacity duration-3000 ease-in-out"
       :class="{ 'opacity-100': showText }">
-      <h1 class="text-6xl font-extrabold leading-tight">
+      <h1 class="md:text-5xl text-3xl font-extrabold leading-tight">
         Criando experiências
         <span
           class="bg-gradient-to-r from-cyan-400 via-blue-500 to-indigo-600 text-transparent bg-clip-text"
@@ -44,7 +44,7 @@ setTimeout(() => (showText.value = true), 3000);
         interativas
       </h1>
 
-      <p class="text-2xl text-gray-300 mt-6">
+      <p class="md:text-2xl text-lg text-gray-300 mt-6">
         Sou um desenvolvedor apaixonado por transformar ideias em soluções
         inovadoras. Construo aplicações performáticas e interfaces envolventes
         que encantam usuários.
