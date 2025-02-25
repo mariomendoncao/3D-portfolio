@@ -1,13 +1,13 @@
 <template>
   <BaseLayout
     :progress="progress"
-    :minInput="0.03"
-    :fullStart="0.1"
-    :fullEnd="0.22"
-    :maxInput="0.26"
+    :minInput="0.75"
+    :fullStart="0.8"
+    :fullEnd="1.1"
+    :maxInput="1.1"
     class="min-h-screen flex items-center justify-start text-white text-4xl flex-col pt-12">
-    <h1 class="main-title-text">Meus serviços</h1>
-
+    <h1 class="main-title-text">Meus Contatos</h1>
+    <!-- <p>min-h-[var(--half-screen)]</p> -->
     <div
       class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-6xl text-center">
       <div

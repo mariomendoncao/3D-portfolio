@@ -1,12 +1,12 @@
 <template>
   <BaseLayout
     :progress="progress"
-    :minInput="0.03"
-    :fullStart="0.1"
-    :fullEnd="0.22"
-    :maxInput="0.26"
-    class="min-h-screen flex items-center justify-start text-white text-4xl flex-col pt-12">
-    <h1 class="main-title-text">Meus serviços</h1>
+    :minInput="0.55"
+    :fullStart="0.6"
+    :fullEnd="0.7"
+    :maxInput="0.75"
+    class="min-h-screen flex items-center justify-center text-white text-4xl flex-col pt-12">
+    <h1 class="main-title-text">Meus Projetos</h1>
 
     <div
       class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-6xl text-center">

@@ -5,6 +5,8 @@ import Background3D from "./components/Background3D.vue";
 import HeroSection from "./components/HeroSection.vue";
 import Habilidades from "./components/ServicesSection.vue";
 import Tecnologies from "./components/TecnologiesSection.vue";
+import MyProjects from "./components/MyProjectsSection.vue";
+import Contact from "./components/ContactSection.vue";
 
 // Valor reativo que representa o progresso da rolagem (0 a 1)
 const progress = ref(0);
@@ -40,15 +42,8 @@ onUnmounted(() => {
       <HeroSection :progress="progress" />
       <habilidades :progress="progress" />
       <Tecnologies :progress="progress" />
-
-      <section
-        class="min-h-screen flex items-center justify-center text-white text-4xl">
-        <div>Projetos</div>
-      </section>
-      <section
-        class="min-h-screen flex items-center justify-center text-white text-4xl">
-        <div>Contato</div>
-      </section>
+      <MyProjects :progress="progress" />
+      <Contact :progress="progress" />
     </div>
   </div>
 </template>
