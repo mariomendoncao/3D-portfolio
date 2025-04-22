@@ -2,9 +2,9 @@
   <BaseLayout
     :progress="progress"
     :minInput="0.03"
-    :fullStart="0.1"
-    :fullEnd="0.22"
-    :maxInput="0.26"
+    :fullStart="0.18"
+    :fullEnd="0.31"
+    :maxInput="0.34"
     class="min-h-screen flex items-center justify-start text-white text-4xl flex-col pt-12">
     <h1 class="main-title-text">Meus serviços</h1>
 

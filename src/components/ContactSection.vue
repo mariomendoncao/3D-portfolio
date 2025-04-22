@@ -8,7 +8,7 @@
     class="min-h-screen flex items-center justify-start text-white text-4xl flex-col pt-12">
     <h1 class="main-title-text">Meus Contatos</h1>
     <!-- <p>min-h-[var(--half-screen)]</p> -->
-    <div
+    <!-- <div
       class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-6xl text-center">
       <div
         v-for="skill in skills"
@@ -22,6 +22,12 @@
           {{ skill.title }}
         </h3>
         <p class="text-white text-xl">{{ skill.description }}</p>
+      </div>
+    </div> -->
+    <div class="grid grid-cols-2 h-full">
+      <div></div>
+      <div class="text-4xl text-gray-600 bg-red-100 h-full">
+        Entre em contato
       </div>
     </div>
   </BaseLayout>
