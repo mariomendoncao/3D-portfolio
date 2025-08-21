@@ -7,9 +7,13 @@ import Habilidades from "./components/ServicesSection.vue";
 import Tecnologies from "./components/TecnologiesSection.vue";
 import MyProjects from "./components/MyProjectsSection.vue";
 import Contact from "./components/ContactSection.vue";
+import Loader from "./components/Loader.vue";
 
 // Valor reativo que representa o progresso da rolagem (0 a 1)
 const progress = ref(0);
+
+// Estado do loading
+const isLoading = ref(true);
 
 const updateProgress = () => {
   const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
@@ -25,12 +29,25 @@ onMounted(() => {
 onUnmounted(() => {
   window.removeEventListener("scroll", updateProgress);
 });
+
+// Função para quando o loading terminar
+const onLoadComplete = () => {
+  isLoading.value = false;
+};
 </script>
 
 <template>
+  <!-- Loader -->
+  <Loader 
+    :is-loading="isLoading" 
+    loading-text="Carregando Portfólio"
+    sub-text="Preparando modelos 3D e animações"
+    @loaded="onLoadComplete"
+  />
+
   <!-- Container principal -->
-  <div class="relative">
-    <p class="fixed left-2">{{ progress.toFixed(2) }}</p>
+  <div v-show="!isLoading" class="relative">
+    <p class="fixed left-2 z-20 text-white bg-black/50 px-2 py-1 rounded text-sm">{{ progress.toFixed(2) }}</p>
     <!-- Fundo 3D fixo -->
     <div class="fixed inset-0 z-0">
       <Background3D :progress="progress" />

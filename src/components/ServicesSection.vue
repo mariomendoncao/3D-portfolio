@@ -5,7 +5,7 @@
     :fullStart="0.18"
     :fullEnd="0.31"
     :maxInput="0.34"
-    class="min-h-screen flex items-center justify-start text-white text-4xl flex-col pt-12">
+    class="min-h-screen flex items-center justify-start text-white text-4xl flex-col pt-8 md:pt-12 px-4 md:px-6">
     <h1 class="main-title-text">Meus serviços</h1>
 
     <div
@@ -21,7 +21,7 @@
         <h3 class="title-text">
           {{ skill.title }}
         </h3>
-        <p class="text-white text-xl">{{ skill.description }}</p>
+        <p class="text-white text-base md:text-xl">{{ skill.description }}</p>
       </div>
     </div>
   </BaseLayout>
@@ -33,7 +33,7 @@ import BaseLayout from "./BaseLayout.vue";
 // import { Code, Brush, Layers } from "lucide-vue-next";
 import { DotLottieVue } from "@lottiefiles/dotlottie-vue";
 
-const progress = ref(0.15); // Exemplo: valor de progresso (pode ser atualizado dinamicamente)
+const props = defineProps(["progress"]);
 
 const skills = ref([
   {

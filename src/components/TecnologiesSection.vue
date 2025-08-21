@@ -8,7 +8,7 @@
     class="min-h-screen flex justify-center items-center absolute inset-0 pointer-events-none custom-backdrop">
     <div class="w-full max-w-6xl text-center">
       <h1 class="main-title-text">Tecnologias Usadas</h1>
-      <p class="text-white text-4xl mb-12">
+      <p class="text-white text-xl md:text-4xl mb-8 md:mb-12 px-4">
         Descubra as tecnologias que impulsionam meu trabalho e transformam
         ideias em soluções inovadoras.
       </p>
@@ -26,9 +26,9 @@
             :style="`--position: ${index + 1}`">
             <div
               class="flex flex-col items-center justify-center text-center p-4">
-              <Icon :icon="tech.icon" class="w-24 h-24 text-white mb-3" />
-              <h3 class="text-black text-lg font-bold">{{ tech.title }}</h3>
-              <p class="text-gray-500 text-base">{{ tech.description }}</p>
+              <Icon :icon="tech.icon" class="w-16 h-16 md:w-24 md:h-24 text-white mb-3" />
+              <h3 class="text-black text-sm md:text-lg font-bold">{{ tech.title }}</h3>
+              <p class="text-gray-500 text-xs md:text-base">{{ tech.description }}</p>
             </div>
           </div>
         </div>
@@ -42,7 +42,7 @@ import { ref } from "vue";
 import BaseLayout from "./BaseLayout.vue";
 import { Icon } from "@iconify/vue";
 
-const progress = ref(0.15);
+const props = defineProps(["progress"]);
 
 // Tecnologias com ícones do @iconify/vue + Nome + Descrição curta
 const technologies = ref([
@@ -119,14 +119,6 @@ const technologies = ref([
   justify-content: center;
 }
 
-.slider .list .item . {
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.7);
-  border-radius: 12px;
-  padding: 15px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
-}
 
 @keyframes autoRun {
   from {

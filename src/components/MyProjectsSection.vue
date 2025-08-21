@@ -6,7 +6,7 @@
     :fullEnd="0.7"
     :maxInput="0.75"
     class="min-h-screen flex flex-col items-center justify-center container mx-auto px-4 py-8">
-    <h1 class="main-title-text text-5xl font-bold mb-8 text-white text-center">
+    <h1 class="main-title-text text-3xl md:text-5xl font-bold mb-8 text-white text-center">
       Meus Projetos Recentes
     </h1>
 
@@ -20,10 +20,10 @@
           class="bg-gray-300/50 backdrop-blur-lg rounded-lg p-12 shadow-lg flex flex-col md:flex-row items-center">
           <!-- Texto do Projeto (centralizado e com fontes maiores) -->
           <div class="flex-1 p-4 text-center">
-            <h2 class="title-text text-3xl font-semibold mb-4 text-gray-900">
+            <h2 class="title-text text-xl md:text-3xl font-semibold mb-4 text-gray-900">
               {{ project.title }}
             </h2>
-            <p class="text-xl text-start text-gray-800">
+            <p class="text-base md:text-xl text-start text-gray-800">
               {{ project.description }}
             </p>
           </div>
@@ -62,7 +62,7 @@ import BaseLayout from "./BaseLayout.vue";
 import { Splide, SplideSlide } from "@splidejs/vue-splide";
 import "@splidejs/splide/dist/css/splide.min.css";
 
-const progress = ref(0.15);
+const props = defineProps(["progress"]);
 
 const projects = ref([
   {

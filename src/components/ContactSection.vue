@@ -5,29 +5,94 @@
     :fullStart="0.8"
     :fullEnd="1.1"
     :maxInput="1.1"
-    class="min-h-screen flex items-center justify-start text-white text-4xl flex-col pt-12">
-    <h1 class="main-title-text">Meus Contatos</h1>
-    <!-- <p>min-h-[var(--half-screen)]</p> -->
-    <!-- <div
-      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-6xl text-center">
-      <div
-        v-for="skill in skills"
-        :key="skill.title"
-        class="rounded h-100 w-full p-4 bg-gray-300/20 backdrop-blur-lg">
-        <div class="text-6xl mb-4">
-          <component :is="skill.icon" />
-          <DotLottieVue autoplay loop :src="skill.animation" />
+    class="min-h-screen flex items-center justify-end text-white px-6 md:px-12 lg:px-16">
+    
+    <div class="w-full h-full flex items-center justify-end">
+      <!-- Container dos Contatos - Lado Direito -->
+      <div class="relative z-10 max-w-md">
+        <!-- Painel Principal de Contato -->
+        <div class="bg-black/40 backdrop-blur-2xl border border-white/40 rounded-3xl p-8 shadow-2xl shadow-black/60">
+          <!-- Cabeçalho -->
+          <div class="text-center mb-8">
+            <div class="w-20 h-20 bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 rounded-full mx-auto mb-4 flex items-center justify-center shadow-xl shadow-purple-500/30">
+              <div class="w-16 h-16 bg-black/30 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/20">
+                <span class="text-3xl font-bold text-white">M</span>
+              </div>
+            </div>
+            <h1 class="text-4xl font-bold text-white mb-3 drop-shadow-lg">Entre em Contato</h1>
+            <p class="text-gray-100 text-lg font-medium">Vamos conversar sobre seu projeto</p>
+          </div>
+
+          <!-- Cards de Contato -->
+          <div class="space-y-4">
+            <!-- WhatsApp -->
+            <a 
+              href="https://wa.me/5511999999999"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="group block bg-white/25 backdrop-blur-xl border border-white/50 rounded-2xl p-6 hover:bg-white/35 hover:border-white/70 transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl hover:shadow-green-500/25">
+              <div class="flex items-center space-x-4">
+                <div class="bg-gradient-to-br from-green-400 to-emerald-600 p-4 rounded-xl shadow-xl group-hover:shadow-green-400/50 transition-all duration-300">
+                  <Phone class="w-7 h-7 text-white drop-shadow-sm" />
+                </div>
+                <div class="flex-1">
+                  <h3 class="text-2xl font-bold text-white mb-1 drop-shadow-sm">WhatsApp</h3>
+                  <p class="text-green-200 font-bold text-xl drop-shadow-sm">(11) 99999-9999</p>
+                  <p class="text-gray-100 text-sm font-medium">Resposta rápida garantida</p>
+                </div>
+              </div>
+            </a>
+
+            <!-- GitHub -->
+            <a 
+              href="https://github.com/mariorodrigues"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="group block bg-white/25 backdrop-blur-xl border border-white/50 rounded-2xl p-6 hover:bg-white/35 hover:border-white/70 transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl hover:shadow-purple-500/25">
+              <div class="flex items-center space-x-4">
+                <div class="bg-gradient-to-br from-purple-500 to-pink-600 p-4 rounded-xl shadow-xl group-hover:shadow-purple-400/50 transition-all duration-300">
+                  <Github class="w-7 h-7 text-white drop-shadow-sm" />
+                </div>
+                <div class="flex-1">
+                  <h3 class="text-2xl font-bold text-white mb-1 drop-shadow-sm">GitHub</h3>
+                  <p class="text-purple-200 font-bold text-xl drop-shadow-sm">/mariorodrigues</p>
+                  <p class="text-gray-100 text-sm font-medium">Veja meus projetos</p>
+                </div>
+              </div>
+            </a>
+
+            <!-- LinkedIn -->
+            <a 
+              href="https://linkedin.com/in/mariorodrigues"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="group block bg-white/25 backdrop-blur-xl border border-white/50 rounded-2xl p-6 hover:bg-white/35 hover:border-white/70 transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl hover:shadow-blue-500/25">
+              <div class="flex items-center space-x-4">
+                <div class="bg-gradient-to-br from-blue-600 to-blue-700 p-4 rounded-xl shadow-xl group-hover:shadow-blue-400/50 transition-all duration-300">
+                  <Linkedin class="w-7 h-7 text-white drop-shadow-sm" />
+                </div>
+                <div class="flex-1">
+                  <h3 class="text-2xl font-bold text-white mb-1 drop-shadow-sm">LinkedIn</h3>
+                  <p class="text-blue-200 font-bold text-xl drop-shadow-sm">/in/mariorodrigues</p>
+                  <p class="text-gray-100 text-sm font-medium">Conecte-se comigo</p>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- Call to Action -->
+          <div class="mt-8">
+            <div class="bg-gradient-to-r from-blue-500/30 via-purple-500/30 to-pink-500/30 backdrop-blur-sm border border-white/40 rounded-2xl p-6 text-center">
+              <h4 class="text-white font-bold text-xl mb-2 drop-shadow-sm">Pronto para começar?</h4>
+              <p class="text-gray-100 font-medium">Escolha a forma de contato que preferir e vamos transformar sua ideia em realidade!</p>
+            </div>
+          </div>
         </div>
-        <h3 class="title-text">
-          {{ skill.title }}
-        </h3>
-        <p class="text-white text-xl">{{ skill.description }}</p>
-      </div>
-    </div> -->
-    <div class="grid grid-cols-2 h-full">
-      <div></div>
-      <div class="text-4xl text-gray-600 bg-red-100 h-full">
-        Entre em contato
+
+        <!-- Elementos Decorativos -->
+        <div class="absolute -top-6 -right-6 w-12 h-12 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full opacity-60 animate-pulse blur-sm"></div>
+        <div class="absolute -bottom-8 -left-8 w-16 h-16 bg-gradient-to-br from-pink-400 to-purple-500 rounded-full opacity-40 animate-pulse delay-300 blur-sm"></div>
+        <div class="absolute top-1/2 -left-4 w-6 h-6 bg-gradient-to-br from-green-400 to-blue-500 rounded-full opacity-50 animate-bounce delay-500"></div>
       </div>
     </div>
   </BaseLayout>
@@ -36,31 +101,7 @@
 <script setup>
 import { ref } from "vue";
 import BaseLayout from "./BaseLayout.vue";
-// import { Code, Brush, Layers } from "lucide-vue-next";
-import { DotLottieVue } from "@lottiefiles/dotlottie-vue";
+import { Phone, Github, Linkedin } from "lucide-vue-next";
 
-const progress = ref(0.15); // Exemplo: valor de progresso (pode ser atualizado dinamicamente)
-
-const skills = ref([
-  {
-    title: "Desenvolvimento Web",
-    description:
-      "Sites modernos, rápidos e responsivos com tecnologias de ponta.",
-    animation:
-      "https://lottie.host/7914b575-8f01-4f70-b676-eb60183513eb/I7JXwHghdT.lottie",
-  },
-  {
-    title: "Design UI/UX",
-    description:
-      "Interfaces intuitivas e elegantes, focadas na experiência do usuário.",
-    animation:
-      "https://lottie.host/c2278531-504d-4835-aeb8-c0d120aa8961/Avop8PfU5f.lottie",
-  },
-  {
-    title: "Soluções Digitais",
-    description: "Sistemas eficientes e personalizados para o seu negócio.",
-    animation:
-      "https://lottie.host/e4b62f91-1216-46c8-9a58-84afeb2f4729/PM9rg0TDNo.lottie",
-  },
-]);
+const props = defineProps(["progress"]);
 </script>
