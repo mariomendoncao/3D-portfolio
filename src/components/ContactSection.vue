@@ -27,7 +27,7 @@
           <div class="space-y-4">
             <!-- WhatsApp -->
             <a 
-              href="https://wa.me/5511999999999"
+              href="https://wa.me/5511964313456"
               target="_blank"
               rel="noopener noreferrer"
               class="group block bg-white/25 backdrop-blur-xl border border-white/50 rounded-2xl p-6 hover:bg-white/35 hover:border-white/70 transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl hover:shadow-green-500/25">
@@ -37,7 +37,7 @@
                 </div>
                 <div class="flex-1">
                   <h3 class="text-2xl font-bold text-white mb-1 drop-shadow-sm">WhatsApp</h3>
-                  <p class="text-green-200 font-bold text-xl drop-shadow-sm">(11) 99999-9999</p>
+                  <p class="text-green-200 font-bold text-xl drop-shadow-sm">(11) 96431-3456</p>
                   <p class="text-gray-100 text-sm font-medium">Resposta rápida garantida</p>
                 </div>
               </div>
@@ -45,7 +45,7 @@
 
             <!-- GitHub -->
             <a 
-              href="https://github.com/mariorodrigues"
+              href="https://github.com/mariomendoncao"
               target="_blank"
               rel="noopener noreferrer"
               class="group block bg-white/25 backdrop-blur-xl border border-white/50 rounded-2xl p-6 hover:bg-white/35 hover:border-white/70 transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl hover:shadow-purple-500/25">
@@ -55,26 +55,24 @@
                 </div>
                 <div class="flex-1">
                   <h3 class="text-2xl font-bold text-white mb-1 drop-shadow-sm">GitHub</h3>
-                  <p class="text-purple-200 font-bold text-xl drop-shadow-sm">/mariorodrigues</p>
+                  <p class="text-purple-200 font-bold text-xl drop-shadow-sm">/mariomendoncao</p>
                   <p class="text-gray-100 text-sm font-medium">Veja meus projetos</p>
                 </div>
               </div>
             </a>
 
-            <!-- LinkedIn -->
+            <!-- Email -->
             <a 
-              href="https://linkedin.com/in/mariorodrigues"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="mailto:mmendol@icloud.com"
               class="group block bg-white/25 backdrop-blur-xl border border-white/50 rounded-2xl p-6 hover:bg-white/35 hover:border-white/70 transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl hover:shadow-blue-500/25">
               <div class="flex items-center space-x-4">
                 <div class="bg-gradient-to-br from-blue-600 to-blue-700 p-4 rounded-xl shadow-xl group-hover:shadow-blue-400/50 transition-all duration-300">
-                  <Linkedin class="w-7 h-7 text-white drop-shadow-sm" />
+                  <Mail class="w-7 h-7 text-white drop-shadow-sm" />
                 </div>
                 <div class="flex-1">
-                  <h3 class="text-2xl font-bold text-white mb-1 drop-shadow-sm">LinkedIn</h3>
-                  <p class="text-blue-200 font-bold text-xl drop-shadow-sm">/in/mariorodrigues</p>
-                  <p class="text-gray-100 text-sm font-medium">Conecte-se comigo</p>
+                  <h3 class="text-2xl font-bold text-white mb-1 drop-shadow-sm">Email</h3>
+                  <p class="text-blue-200 font-bold text-xl drop-shadow-sm">mmendol@icloud.com</p>
+                  <p class="text-gray-100 text-sm font-medium">Envie uma mensagem</p>
                 </div>
               </div>
             </a>
@@ -101,7 +99,7 @@
 <script setup>
 import { ref } from "vue";
 import BaseLayout from "./BaseLayout.vue";
-import { Phone, Github, Linkedin } from "lucide-vue-next";
+import { Phone, Github, Mail } from "lucide-vue-next";
 
 const props = defineProps(["progress"]);
 </script>
