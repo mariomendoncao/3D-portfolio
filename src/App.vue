@@ -8,6 +8,7 @@ import Tecnologies from "./components/TecnologiesSection.vue";
 import MyProjects from "./components/MyProjectsSection.vue";
 import Contact from "./components/ContactSection.vue";
 import Loader from "./components/Loader.vue";
+import HamburgerMenu from "./components/HamburgerMenu.vue";
 
 // Valor reativo que representa o progresso da rolagem (0 a 1)
 const progress = ref(0);
@@ -47,6 +48,7 @@ const onLoadComplete = () => {
 
   <!-- Container principal -->
   <div v-show="!isLoading" class="relative">
+    <HamburgerMenu />
     <p class="fixed left-2 z-20 text-white bg-black/50 px-2 py-1 rounded text-sm">{{ progress.toFixed(2) }}</p>
     <!-- Fundo 3D fixo -->
     <div class="fixed inset-0 z-0">
