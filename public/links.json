@@ -10,5 +10,9 @@
     {
         "name": "App 3",
         "url": "https://app3.mmendol.com"
+    },
+    {
+        "name": "App de Teste",
+        "url": "https://google.com"
     }
 ]
