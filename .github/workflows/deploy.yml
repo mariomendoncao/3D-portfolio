@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Setup SSH
@@ -24,8 +24,11 @@ jobs:
         run: |
           ssh deploy@${{ secrets.VPS_HOST }} << 'EOF'
             set -e
+
             cd /srv/docker/3d-portfolio
+
             git pull origin main
+
             docker compose down
             docker compose build
             docker compose up -d
