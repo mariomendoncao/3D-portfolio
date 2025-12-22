@@ -49,7 +49,6 @@ const onLoadComplete = () => {
   <!-- Container principal -->
   <div v-show="!isLoading" class="relative">
     <HamburgerMenu />
-    <p class="fixed left-2 z-20 text-white bg-black/50 px-2 py-1 rounded text-sm">{{ progress.toFixed(2) }}</p>
     <!-- Fundo 3D fixo -->
     <div class="fixed inset-0 z-0">
       <Background3D :progress="progress" />
