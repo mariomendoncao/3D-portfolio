@@ -16,26 +16,15 @@ jobs:
       - name: Setup SSH
         run: |
           mkdir -p ~/.ssh
-
           echo "${{ secrets.VPS_SSH_KEY }}" > ~/.ssh/id_ed25519
           chmod 600 ~/.ssh/id_ed25519
-
-          # Registra o host explicitamente (porta 22)
           ssh-keyscan -p 22 -H ${{ secrets.VPS_HOST }} >> ~/.ssh/known_hosts
 
       - name: Deploy on VPS
         run: |
-          ssh \
-            -o StrictHostKeyChecking=no \
-            -o UserKnownHostsFile=/dev/null \
-            deploy@${{ secrets.VPS_HOST }} << 'EOF'
-              set -e
-
-              cd /srv/docker/3d-portfolio
-
-              git pull origin main
-
-              docker compose down
-              docker compose build
-              docker compose up -d
+          ssh deploy@${{ secrets.VPS_HOST }} << 'EOF'
+            set -e
+            cd /srv/docker/3d-portfolio
+            git pull origin main
+            docker compose up -d --build
           EOF
