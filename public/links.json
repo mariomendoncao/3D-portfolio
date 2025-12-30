@@ -1,18 +1,14 @@
 [
     {
-        "name": "App 1",
-        "url": "https://app1.mmendol.com"
+        "name": "Doutriner APP",
+        "url": "https://doutriner.mmendol.com"
     },
     {
-        "name": "App 2",
-        "url": "https://app2.mmendol.com"
+        "name": "Escala Estagiários",
+        "url": "https://escala-estagiarios.mmendol.com"
     },
     {
-        "name": "App 3",
-        "url": "https://app3.mmendol.com"
-    },
-    {
-        "name": "App de Teste",
-        "url": "https://google.com"
+        "name": "Gemini TTS",
+        "url": "https://geminitts.mmendol.com"
     }
 ]
